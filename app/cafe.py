@@ -12,10 +12,6 @@ class Cafe:
         self.__name = name
 
     @property
-    def success_message(self) -> str:
-        return f"Welcome to {self.__name}"
-
-    @property
     def name(self) -> str:
         return self.__name
 
@@ -32,4 +28,5 @@ class Cafe:
         if not visitor.get("wearing_a_mask"):
             raise NotWearingMaskError("Should be wearing a mask")
 
-        return self.success_message
+        return f"Welcome to {self.name}"
+
